@@ -4,6 +4,12 @@ public class JdbcImageMain {
     private static void help(){
         System.out.println("See documentation at https://sranka.github.io/jdbcimage");
     }
+
+    /**
+     * export -url=jdbc:oracle:thin:@192.168.31.201:1521/PDB -user=GZNX_22 -password=123456 -exclude=aaa,bbb -include=user oracle-2023-11-23.zip
+     * @param args
+     * @throws Exception
+     */
     public static void main(String... args)  throws Exception{
         args = MainToolBase.setupSystemProperties(args);
         String action = args.length>0?args[0]:null;
